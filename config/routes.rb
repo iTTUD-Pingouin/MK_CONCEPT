@@ -7,8 +7,21 @@ Rails.application.routes.draw do
 
   resources :pieces do
     collection do
-      get 'pl', to: "pieces#pl"
+      get 'pltp', to: "pieces#pltp"
     end
+    collection do
+      get 'signalisations', to: "pieces#signalisations"
+    end
+    collection do
+      get 'lubrifiants', to: "pieces#lubrifiants"
+    end
+    collection do
+      get 'accessoires', to: "pieces#accessoires"
+    end
+    collection do
+      get 'occasions', to: "pieces#occasions"
+    end
+
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -2,7 +2,7 @@ class PiecesController < ApplicationController
 
   before_action :set_piece, only: [:show, :edit, :update, :destroy]
 
-  def pl
+  def pltp
     @pl_pieces = Piece.where(category: 'PL')
   end
 
