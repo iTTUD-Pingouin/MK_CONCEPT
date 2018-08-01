@@ -6,6 +6,22 @@ class PiecesController < ApplicationController
     @pl_pieces = Piece.where(category: 'PL')
   end
 
+  def signalisations
+    @pl_pieces = Piece.where(category: 'signalisations')
+  end
+
+  def lubrifiants
+    @pl_pieces = Piece.where(category: 'lubrifiants')
+  end
+
+  def accessoires
+    @pl_pieces = Piece.where(category: 'accessoires')
+  end
+
+  def occasions
+    @pl_pieces = Piece.where(category: 'occasions')
+  end
+
   def index
     @pieces = Piece.all
   end
