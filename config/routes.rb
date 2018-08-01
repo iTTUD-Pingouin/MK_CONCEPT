@@ -5,8 +5,10 @@ Rails.application.routes.draw do
 
   get 'contact', to: 'pages#contact'
 
-  get 'pieces', to: 'pieces#index'
-
-
+  resources :pieces do
+    collection do
+      get 'pl', to: "pieces#pl"
+    end
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,1 +1,16 @@
 <h1>Tous les articles en vente</h1>
+
+
+<% @pieces.each do |piece| %>
+
+  <h4><%= piece.name %></h4>
+  <p><%= piece.description %></p>
+  <%= link_to "Plus d'infos", piece_path(piece) %>
+  <%= link_to "Modifier cette pièce", edit_piece_path(piece) %>
+  <%= link_to "Supprimer cette pièce", piece_path(piece), method: :delete %>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to "Ajouter une pièce", new_piece_path %>
